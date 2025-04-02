@@ -16,17 +16,17 @@ const App = () => {
     rock: {
       name: "rock",
       koName: "바위",
-      img: "/image/rock-re.jpg",
+      img: 'require("./image/rock.png")',
     },
     sissors: {
       name: "sissors",
       koName: "가위",
-      img: "/image/sissors.png",
+      img: 'require("./image/sissors.png")',
     },
     paper: {
       name: "paper",
       koName: "보",
-      img: "/image/paper.png",
+      img: 'require("./image/paper.png")',
     },
   };
 
@@ -119,7 +119,11 @@ const App = () => {
   return (
     <div className="main">
       <Container className="bootstrap-container-re">
-        <img className="lion" src="/image/lion.png" alt="lion"></img>
+        <img
+          className="lion"
+          src={require("/image/lion.png").default}
+          alt="lion"
+        ></img>
         <div className="cong">
           두구두구! 과연 승자는<i>!</i>
         </div>
@@ -185,7 +189,8 @@ const App = () => {
                 )}
               </div>
             </Col>
-              <Col
+
+            <Col
               xs={6}
               style={{
                 ...(resultCss?.[result]?.name && {
@@ -322,7 +327,11 @@ const App = () => {
           </div>
         )}
 
-        <img className="lion2" src="/image/lion2.png" alt="lion2"></img>
+        <img
+          className="lion2"
+          src={require("/image/lion2.png").default}
+          alt="lion2"
+        ></img>
       </Container>
     </div>
   );
