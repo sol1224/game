@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Button } from "react-bootstrap";
+import lion from "./assets/image/lion.png";
 
 // 🚀3일차 가위바위 보게임 최종 결과물
 // 유저가 가위, 바위, 보 버튼 클릭시 컴퓨터는 랜덤하게 선택이 되어야 한다.
@@ -119,7 +120,7 @@ const App = () => {
   return (
     <div className="main">
       <Container className="bootstrap-container-re">
-        <img className="lion" src="../assets/image/lion.png" alt="lion"></img>
+        <img className="lion" src={lion} alt="lion"></img>
         <div className="cong">
           두구두구! 과연 승자는<i>!</i>
         </div>
