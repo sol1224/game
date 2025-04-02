@@ -185,16 +185,18 @@ const App = () => {
                 )}
               </div>
             </Col>
-            <Col
+              <Col
               xs={6}
               style={{
-                border: `2px solid ${
-                  resultCss[result].color === "패"
-                    ? "green"
-                    : resultCss[result].color === "승"
-                    ? "red"
-                    : "gray"
-                }`,
+                ...(resultCss?.[result]?.name && {
+                  border: `2px solid ${
+                    resultCss[result].name === "패"
+                      ? "green"
+                      : resultCss[result].name === "승"
+                      ? "red"
+                      : "gray"
+                  }`,
+                }),
                 borderRadius: "20px",
                 overflow: "hidden",
               }}
