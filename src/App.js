@@ -235,7 +235,7 @@ const App = () => {
                 {computerSelect ? (
                   <img
                     className="play-game select-img"
-                    src={`images/${computerSelect.img}`}
+                    src={`images/${computerSelect.img}.png`}
                     alt="paper"
                   ></img>
                 ) : (
