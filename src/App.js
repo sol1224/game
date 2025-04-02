@@ -122,7 +122,7 @@ const App = () => {
         <img
           className="lion"
           img
-          src={process.env.PUBLIC_URL + "assets/image/lion.png"}
+          src={process.env.PUBLIC_URL + "/public/image/lion.png"}
           alt="lion"
         ></img>
         <div className="cong">
