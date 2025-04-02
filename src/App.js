@@ -6,6 +6,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Button } from "react-bootstrap";
 
+// 🚀3일차 가위바위 보게임 최종 결과물
+// 유저가 가위, 바위, 보 버튼 클릭시 컴퓨터는 랜덤하게 선택이 되어야 한다.
+// 게임의 결과가 맞게 나와야 한다 (이김, 짐, 비김이 각 카드에 유저와 컴퓨터 각자의 입장에 맞게 나와야함)
+// 결과에 따라 다른 테두리색을 보여줘야한다 (예: 이김-초록, 짐-빨감, 비김- 회색)
+
 const App = () => {
   const sissorsRockPaper = {
     rock: {
@@ -126,8 +131,16 @@ const App = () => {
         <div className="score"></div>
 
         <div className="row-width">
-          <Row>
-            <Col xs={6}>
+          <Row style={{ backgroundColor: "white" }}>
+            {/* <Col xs={6}> */}
+            <Col
+              style={{
+                border: `2px solid ${resultCss[result]?.color}`,
+                borderRadius: "20px",
+                overflow: "hidden",
+              }}
+              xs={6}
+            >
               <div className="flex-row">
                 <div className="whoIs">YOU</div>
 
@@ -136,9 +149,7 @@ const App = () => {
                     <div
                       className="resultCss-circle"
                       style={{
-                        backgroundColor: resultCss[result]?.color || (
-                          <span>""</span>
-                        ),
+                        backgroundColor: resultCss[result]?.color || "",
                       }}
                     >
                       {resultCss[result].name}
@@ -174,7 +185,20 @@ const App = () => {
                 )}
               </div>
             </Col>
-            <Col xs={6}>
+            <Col
+              xs={6}
+              style={{
+                border: `2px solid ${
+                  resultCss[result].color === "패"
+                    ? "green"
+                    : resultCss[result].color === "승"
+                    ? "red"
+                    : "gray"
+                }`,
+                borderRadius: "20px",
+                overflow: "hidden",
+              }}
+            >
               <div className="flex-row">
                 <div className="whoIs">COMPUTER</div>
 
