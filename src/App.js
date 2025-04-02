@@ -166,13 +166,13 @@ const App = () => {
                 {select ? (
                   <img
                     className="play-game select-img"
-                    src={select.img}
+                    src={`images/${select.img}`}
                     alt="paper"
                   ></img>
                 ) : (
                   <img
                     className="play-game select-img"
-                    src="/src/assets/image/move.gif"
+                    src={"images/move.gif"}
                     alt="paper"
                   ></img>
                 )}
@@ -235,13 +235,13 @@ const App = () => {
                 {computerSelect ? (
                   <img
                     className="play-game select-img"
-                    src={computerSelect.img}
+                    src={`images/${computerSelect.img}`}
                     alt="paper"
                   ></img>
                 ) : (
                   <img
                     className="play-game select-img"
-                    src="/src/assets/image/move.gif"
+                    src={"images/move.gif"}
                     alt="paper"
                   ></img>
                 )}
@@ -263,7 +263,7 @@ const App = () => {
           <button className="button-style-none">
             <img
               className="sub-img"
-              src="/src/assets/image/rock-re.png"
+              src={"images/rock-re.png"}
               alt="rock"
               onClick={() => game("rock")}
             ></img>
@@ -271,7 +271,7 @@ const App = () => {
           <button className="button-style-none">
             <img
               className="sub-img"
-              src="/src/assets/image/sissors.png"
+              src={"images/sissors.png"}
               alt="sissors"
               value="sissors"
               onClick={() => game("sissors")}
@@ -280,7 +280,7 @@ const App = () => {
           <button className="button-style-none">
             <img
               className="sub-img"
-              src="/src/assets/image/paper.png"
+              src={"images/paper.png"}
               alt="paper"
               value="paper"
               onClick={() => game("paper")}
