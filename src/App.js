@@ -119,12 +119,7 @@ const App = () => {
   return (
     <div className="main">
       <Container className="bootstrap-container-re">
-        <img
-          className="lion"
-          img
-          src={process.env.PUBLIC_URL + "/public/image/lion.png"}
-          alt="lion"
-        ></img>
+        <img className="lion" img src={"images/lion.png"} alt="lion"></img>
         <div className="cong">
           두구두구! 과연 승자는<i>!</i>
         </div>
