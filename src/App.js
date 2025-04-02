@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Button } from "react-bootstrap";
+import * as images from "/public/image";
 
 // 🚀3일차 가위바위 보게임 최종 결과물
 // 유저가 가위, 바위, 보 버튼 클릭시 컴퓨터는 랜덤하게 선택이 되어야 한다.
@@ -16,17 +17,17 @@ const App = () => {
     rock: {
       name: "rock",
       koName: "바위",
-      img: 'require("./image/rock.png")',
+      img: `/images/${images.rock}.jpg`,
     },
     sissors: {
       name: "sissors",
       koName: "가위",
-      img: 'require("./image/sissors.png")',
+      img: `/images/${images.sissors}.png`,
     },
     paper: {
       name: "paper",
       koName: "보",
-      img: 'require("./image/paper.png")',
+      img: `/images/${images.scissors}.png`,
     },
   };
 
@@ -121,7 +122,7 @@ const App = () => {
       <Container className="bootstrap-container-re">
         <img
           className="lion"
-          src={require("/image/lion.png").default}
+          src={`/image/${images.lion}.png`}
           alt="lion"
         ></img>
         <div className="cong">
@@ -170,13 +171,13 @@ const App = () => {
                 {select ? (
                   <img
                     className="play-game select-img"
-                    src={select.img}
+                    src={`/images/${select.img}.png`}
                     alt="paper"
-                  ></img>
+                  />
                 ) : (
                   <img
                     className="play-game select-img"
-                    src="/image/move.gif"
+                    src={`/image/${select.move}.gif`}
                     alt="paper"
                   ></img>
                 )}
@@ -239,13 +240,13 @@ const App = () => {
                 {computerSelect ? (
                   <img
                     className="play-game select-img"
-                    src={computerSelect.img}
+                    src={`/images/${computerSelect.img}.png`}
                     alt="paper"
                   ></img>
                 ) : (
                   <img
                     className="play-game select-img"
-                    src="/image/move.gif"
+                    src={`/image/${select.move}.gif`}
                     alt="paper"
                   ></img>
                 )}
@@ -267,7 +268,7 @@ const App = () => {
           <button className="button-style-none">
             <img
               className="sub-img"
-              src="/image/rock.png"
+              src={`/image/${images.rock}.gif`}
               alt="rock"
               onClick={() => game("rock")}
             ></img>
@@ -275,7 +276,7 @@ const App = () => {
           <button className="button-style-none">
             <img
               className="sub-img"
-              src="/image/sissors.png"
+              src={`/image/${images.sissors}.gif`}
               alt="sissors"
               value="sissors"
               onClick={() => game("sissors")}
@@ -284,7 +285,7 @@ const App = () => {
           <button className="button-style-none">
             <img
               className="sub-img"
-              src="/image/paper.png"
+              src={`/image/${images.paper}.gif`}
               alt="paper"
               value="paper"
               onClick={() => game("paper")}
@@ -327,11 +328,7 @@ const App = () => {
           </div>
         )}
 
-        <img
-          className="lion2"
-          src={require("/image/lion2.png").default}
-          alt="lion2"
-        ></img>
+        <img className="lion2" src="/image/lion2.png" alt="lion2"></img>
       </Container>
     </div>
   );
