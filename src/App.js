@@ -16,7 +16,7 @@ const App = () => {
     rock: {
       name: "rock",
       koName: "바위",
-      img: `/image/rock.jpg`,
+      img: `/image/rock.png`,
     },
     sissors: {
       name: "sissors",
@@ -166,7 +166,7 @@ const App = () => {
                 {select ? (
                   <img
                     className="play-game select-img"
-                    src={`images/${select.img}`}
+                    src={`images/${select.img}.png`}
                     alt="paper"
                   ></img>
                 ) : (
@@ -235,7 +235,7 @@ const App = () => {
                 {computerSelect ? (
                   <img
                     className="play-game select-img"
-                    src={`images/${computerSelect.img}`}
+                    src={`images/${computerSelect.img}.png`}
                     alt="paper"
                   ></img>
                 ) : (
@@ -323,7 +323,7 @@ const App = () => {
           </div>
         )}
 
-        <img className="lion2" src="/image/lion2.png" alt="lion2"></img>
+        <img className="lion2" src="/images/lion2.png" alt="lion2"></img>
       </Container>
     </div>
   );
