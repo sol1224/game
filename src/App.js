@@ -119,7 +119,7 @@ const App = () => {
   return (
     <div className="main">
       <Container className="bootstrap-container-re">
-        <img className="lion" src="/image/lion.png" alt="lion"></img>
+        <img className="lion" src="/src/assets/image/lion.png" alt="lion"></img>
         <div className="cong">
           두구두구! 과연 승자는<i>!</i>
         </div>
