@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Button } from "react-bootstrap";
-import * as images from "/public/image";
+import * as images from "/src/assets/image";
 
 // 🚀3일차 가위바위 보게임 최종 결과물
 // 유저가 가위, 바위, 보 버튼 클릭시 컴퓨터는 랜덤하게 선택이 되어야 한다.
